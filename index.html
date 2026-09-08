@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - IBAN Scanner Pro</title>
+    <meta name="description" content="Privacy Policy for IBAN Scanner Pro Android Application - On-Device IBAN Scanning, Validation, and Data Protection.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --primary-light: #e0f2fe;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-alt: #f1f5f9;
+            --border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #38bdf8;
+                --primary-dark: #0ea5e9;
+                --primary-light: rgba(56, 189, 248, 0.12);
+                --accent: #22d3ee;
+                --success: #34d399;
+                --bg: #070b19;
+                --surface: #0f172a;
+                --surface-alt: #1e293b;
+                --border: #1e293b;
+                --text-main: #f8fafc;
+                --text-muted: #94a3b8;
+                --card-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 40px 24px 80px 24px;
+        }
+
+        header {
+            text-align: center;
+            padding: 48px 0 36px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .meta-info {
+            color: var(--text-muted);
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .meta-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .highlight-banner {
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
+            border: 1px solid var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .highlight-banner h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .highlight-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px 18px;
+        }
+
+        .highlight-item strong {
+            display: block;
+            font-size: 14px;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .highlight-item p {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .toc {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin-bottom: 40px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .toc h3 {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .toc ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 8px 16px;
+        }
+
+        .toc a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .toc a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 28px;
+            box-shadow: var(--card-shadow);
+        }
+
+        section h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        section h2 .section-num {
+            background: var(--primary-light);
+            color: var(--primary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .permission-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+
+        .permission-table th, .permission-table td {
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        .permission-table th {
+            background: var(--surface-alt);
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .code-snippet {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--surface-alt);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--primary);
+        }
+
+        .contact-box {
+            background: var(--surface-alt);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            margin-top: 16px;
+            border-left: 4px solid var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-muted);
+            font-size: 13px;
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                color: #000000;
+            }
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+            section {
+                border: 1px solid #ddd;
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+            .toc, .highlight-banner {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="app-badge">Official Legal Document</div>
+        <h1>Privacy Policy</h1>
+        <p style="font-size: 18px; color: var(--text-muted); font-weight: 500;">IBAN Scanner Pro for Android</p>
+        <div class="meta-info">
+            <span><strong>App:</strong> IBAN Scanner Pro</span>
+            <span><strong>Effective Date:</strong> September 6, 2026</span>
+            <span><strong>Last Updated:</strong> September 6, 2026</span>
+        </div>
+    </header>
+
+    <!-- Quick Highlights -->
+    <div class="highlight-banner">
+        <h3>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            Summary: Privacy-First & 100% On-Device Processing
+        </h3>
+        <p style="margin-bottom: 0; font-size: 14px; color: var(--text-muted);">
+            We built <strong>IBAN Scanner Pro</strong> with complete data privacy in mind. We do <strong>not</strong> operate remote servers to harvest or collect your financial data. Scanned camera frames, images, and IBAN numbers are processed <strong>strictly on your local device</strong>.
+        </p>
+
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <strong>🔒 No Server Transmission</strong>
+                <p>Scanned IBANs and camera feeds never leave your phone.</p>
+            </div>
+            <div class="highlight-item">
+                <strong>⚡ On-Device OCR</strong>
+                <p>Text detection runs locally in device memory via Google ML Kit.</p>
+            </div>
+            <div class="highlight-item">
+                <strong>🗄️ Local Sandboxed Storage</strong>
+                <p>Scan history is stored on your device SQLite Room DB. You can wipe it anytime.</p>
+            </div>
+            <div class="highlight-item">
+                <strong>🛡️ Zero Broad Storage</strong>
+                <p>Uses the official Android Photo Picker. No access to private files or full gallery.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table of contents -->
+    <nav class="toc">
+        <h3>Table of Contents</h3>
+        <ul>
+            <li><a href="#section-1">1. Introduction & Scope</a></li>
+            <li><a href="#section-2">2. Information We Process</a></li>
+            <li><a href="#section-3">3. Android Device Permissions</a></li>
+            <li><a href="#section-4">4. On-Device OCR & Validation</a></li>
+            <li><a href="#section-5">5. Local Data Storage & Deletion</a></li>
+            <li><a href="#section-6">6. Third-Party Libraries & Services</a></li>
+            <li><a href="#section-7">7. Advertising & Monetization</a></li>
+            <li><a href="#section-8">8. Children's Privacy (COPPA)</a></li>
+            <li><a href="#section-9">9. Your Rights (GDPR & CCPA)</a></li>
+            <li><a href="#section-10">10. Data Security</a></li>
+            <li><a href="#section-11">11. Changes to This Policy</a></li>
+            <li><a href="#section-12">12. Contact Information</a></li>
+        </ul>
+    </nav>
+
+    <!-- SECTION 1 -->
+    <section id="section-1">
+        <h2><span class="section-num">1</span> Introduction & Scope</h2>
+        <p>
+            This Privacy Policy describes how <strong>IBAN Scanner Pro</strong> ("the Application", "we", "us", or "our"), developed by <strong>Shahzaib</strong>, handles your information when you use our mobile application on the Android operating system.
+        </p>
+        <p>
+            We are committed to safeguarding your personal and financial privacy. This policy explains our data practices in full compliance with the <strong>Google Play Developer Program Policies</strong>, the <strong>General Data Protection Regulation (GDPR)</strong>, and the <strong>California Consumer Privacy Act (CCPA)</strong>.
+        </p>
+        <p>
+            By downloading, installing, or using IBAN Scanner Pro, you agree to the collection and handling of information in accordance with this Privacy Policy.
+        </p>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="section-2">
+        <h2><span class="section-num">2</span> Information We Process</h2>
+        <p>
+            <strong>IBAN Scanner Pro</strong> is designed as a standalone utility tool. We do not require account registration, login credentials, phone numbers, or passwords.
+        </p>
+        <ul>
+            <li>
+                <strong>Camera Frames & Image Data:</strong> When you point your camera at a document or select an image to extract an IBAN, the image frames are analyzed locally in volatile RAM. No image or video stream is ever sent across the internet.
+            </li>
+            <li>
+                <strong>Extracted Financial Identifiers (IBANs & Bank Codes):</strong> Text recognized as an International Bank Account Number (IBAN) or national bank identifier is formatted and validated locally against ISO 13616 and ISO 7064 checksum algorithms.
+            </li>
+            <li>
+                <strong>User Preferences:</strong> Your customized preferences (such as preferred country code, theme mode, and auto-copy toggle) are stored in your device's private <span class="code-snippet">SharedPreferences</span>.
+            </li>
+            <li>
+                <strong>Crash & Diagnostic Logs:</strong> Anonymous, non-identifiable technical diagnostics (e.g., app version, Android OS version, crash stack traces) may be provided through standard Google Play Console developer reports to help resolve bugs.
+            </li>
+        </ul>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="section-3">
+        <h2><span class="section-num">3</span> Android Device Permissions</h2>
+        <p>
+            The application requests only the minimum permissions necessary to perform its advertised functions. Each permission is requested dynamically at runtime:
+        </p>
+
+        <table class="permission-table">
+            <thead>
+                <tr>
+                    <th>Permission Name</th>
+                    <th>Purpose & Usage</th>
+                    <th>Data Transmitted Off-Device?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="code-snippet">android.permission.CAMERA</span></td>
+                    <td>
+                        Enables the live camera viewfinder to scan and read IBAN numbers printed on paper invoices, banking statements, and cards.
+                    </td>
+                    <td><strong>NO.</strong> Processed locally in device memory; never transmitted.</td>
+                </tr>
+                <tr>
+                    <td><strong>Android Photo Picker</strong><br><span class="code-snippet">PickVisualMedia</span></td>
+                    <td>
+                        Allows you to choose an image from your device gallery to extract IBANs. Uses Android's modern zero-permission system photo picker.
+                    </td>
+                    <td><strong>NO.</strong> Read locally; only the specific image you pick is accessed.</td>
+                </tr>
+                <tr>
+                    <td><strong>System Clipboard Access</strong></td>
+                    <td>
+                        Enables one-tap copying of validated IBANs to your device clipboard so you can paste them into your banking or messaging app.
+                    </td>
+                    <td><strong>NO.</strong> Local system clipboard operation only.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="section-4">
+        <h2><span class="section-num">4</span> On-Device OCR & Algorithmic Validation</h2>
+        <p>
+            Unlike cloud-based OCR services that upload your private documents to third-party servers, <strong>IBAN Scanner Pro</strong> operates strictly on-device:
+        </p>
+        <ul>
+            <li>
+                <strong>Google ML Kit Text Recognition:</strong> The text recognition engine runs directly on your smartphone's hardware processor using bundled on-device models.
+            </li>
+            <li>
+                <strong>Mathematical ISO Checksum Validation:</strong> Validations (such as Mod-97 checksum calculations and country-specific IBAN length rules) are executed directly in local Kotlin application logic.
+            </li>
+            <li>
+                <strong>Offline Capable:</strong> Core scanning, validation, history browsing, and clipboard copying functions operate completely offline without an active internet connection.
+            </li>
+        </ul>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="section-5">
+        <h2><span class="section-num">5</span> Local Data Storage & User Deletion</h2>
+        <p>
+            Any data generated while using the application remains under your total control:
+        </p>
+        <ul>
+            <li>
+                <strong>Local SQLite Room Database:</strong> When an IBAN is successfully scanned or manually saved, it is recorded in an on-device database sandboxed within the application directory.
+            </li>
+            <li>
+                <strong>Immediate Deletion:</strong> You can delete any individual scan record from the History screen at any time by tapping the delete icon.
+            </li>
+            <li>
+                <strong>Bulk Clear:</strong> You can clear the entire scan history with one tap via <em>Settings &gt; Data &amp; Privacy &gt; Clear Scan History</em>.
+            </li>
+            <li>
+                <strong>App Uninstall:</strong> Uninstalling the application immediately and irreversibly deletes the local SQLite database and all cached settings through Android's operating system sandbox.
+            </li>
+        </ul>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="section-6">
+        <h2><span class="section-num">6</span> Third-Party Libraries & Services</h2>
+        <p>
+            The application incorporates trusted open-source and platform libraries to provide its features:
+        </p>
+        <ul>
+            <li>
+                <strong>Google Play Services / Google ML Kit:</strong> Used for on-device optical character recognition. For details, refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.
+            </li>
+            <li>
+                <strong>Android Jetpack & Room:</strong> First-party Android architecture components by Google for interface rendering and local data persistence.
+            </li>
+        </ul>
+    </section>
+
+    <!-- SECTION 7 -->
+    <section id="section-7">
+        <h2><span class="section-num">7</span> Advertising & Monetization</h2>
+        <p>
+            To support ongoing development, IBAN Scanner Pro may display advertisements powered by <strong>Google AdMob</strong>.
+        </p>
+        <ul>
+            <li>
+                <strong>Ad Network:</strong> Google AdMob may collect pseudonymous identifiers (such as the Google Advertising ID / AAID) and device information to serve ads in compliance with Google Play policies and applicable privacy laws.
+            </li>
+            <li>
+                <strong>Opting Out of Personalized Ads:</strong> You can reset or opt out of personalized advertising at any time through your Android device settings: <em>Settings &gt; Google &gt; Ads &gt; Delete advertising ID</em> or <em>Opt out of Ads Personalization</em>.
+            </li>
+            <li>
+                <strong>No Financial Data Shared:</strong> IBAN numbers, banking details, and scanned document contents are <strong>never</strong> shared with advertisers or ad networks.
+            </li>
+        </ul>
+    </section>
+
+    <!-- SECTION 8 -->
+    <section id="section-8">
+        <h2><span class="section-num">8</span> Children's Privacy (COPPA Compliance)</h2>
+        <p>
+            IBAN Scanner Pro is a financial utility application designed for adults and business professionals. It is not intended for use by children under the age of 13 (or under 16 in the European Economic Area).
+        </p>
+        <p>
+            We do not knowingly collect, request, or solicit any personal information from children. If we discover that a child under 13 has provided us with personal information, we will immediately delete such data.
+        </p>
+    </section>
+
+    <!-- SECTION 9 -->
+    <section id="section-9">
+        <h2><span class="section-num">9</span> Your Rights (GDPR & CCPA/CPRA)</h2>
+        <p>
+            Depending on your location, you have specific rights regarding your personal information:
+        </p>
+        <ul>
+            <li><strong>Right of Access:</strong> You have the right to inspect all data stored about you (viewable directly in the app's History screen).</li>
+            <li><strong>Right to Erasure (Right to be Forgotten):</strong> You have the right to erase all your stored data at any time via the in-app "Clear Scan History" function.</li>
+            <li><strong>Right to Data Portability:</strong> You can export or copy your validated IBANs via clipboard or file export.</li>
+            <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising any of your privacy rights.</li>
+        </ul>
+    </section>
+
+    <!-- SECTION 10 -->
+    <section id="section-10">
+        <h2><span class="section-num">10</span> Data Security</h2>
+        <p>
+            We prioritize data security by adhering to the principle of <strong>data minimization</strong>. Because we do not transmit or store your banking information on external servers, the threat of cloud-based breaches or server leaks is eliminated.
+        </p>
+        <p>
+            Local data is protected by the Android application sandbox, preventing other unauthorized apps on your device from reading IBAN Scanner Pro's internal database. We recommend keeping your Android operating system up-to-date and securing your device with a PIN, fingerprint, or password lock.
+        </p>
+    </section>
+
+    <!-- SECTION 11 -->
+    <section id="section-11">
+        <h2><span class="section-num">11</span> Changes to This Privacy Policy</h2>
+        <p>
+            We may update our Privacy Policy periodically to reflect app improvements, security enhancements, or legal requirements. Any updates will be posted to this page with an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically.
+        </p>
+    </section>
+
+    <!-- SECTION 12 -->
+    <section id="section-12">
+        <h2><span class="section-num">12</span> Contact Information</h2>
+        <p>
+            If you have questions, concerns, feedback, or requests regarding this Privacy Policy or your data, please contact the developer:
+        </p>
+
+        <div class="contact-box">
+            <p style="margin-bottom: 6px;"><strong>Developer:</strong>SmartByte Studios</p>
+            <p style="margin-bottom: 6px;"><strong>Application:</strong> IBAN Scanner Pro</p>
+            <p style="margin-bottom: 6px;">
+                <strong>Email:</strong> <a href="mailto:SmartByteStudios@gmail.com" style="color: var(--primary); font-weight: 600;">SmartByteStudios@gmail.com</a>
+            </p>
+            <p style="margin-bottom: 0;"><strong>Country:</strong> Pakistan</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 IBAN Scanner Pro. All rights reserved.</p>
+        <p style="margin-top: 6px; font-size: 12px;">ISO 13616 &bull; ISO 7064 Mod-97 Compliant Verification</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
